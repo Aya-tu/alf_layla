@@ -25,17 +25,6 @@ Alf_Layla is a fictional restaurant website created to practice and demonstrate 
 
 ---
 
-## 📂 How to Run
-
-1. Clone the repository:
-   bash
-   git clone https://github.com/yourusername/alf_layla.git
-   
-2. Open `index.html` in your browser.
-3. Explore each page via navigation links.
-
----
-
 *🚧 Still in Progress?*
 
 Yes! This project is part of my learning journey. I plan to keep improving it with:
