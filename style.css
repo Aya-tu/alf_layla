@@ -1,0 +1,679 @@
+/* إعدادات عامة */
+body {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  background-color: #fff1e0;
+  color: #333;
+  position: relative;
+  height: 100%;
+}
+a{
+  text-decoration: none;
+}
+
+/*  h2 tage تأثير الكتابة علي  */
+h2 {
+  
+  justify-content: center;
+  text-align: center;
+  color: #8B0000;
+  font-size: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  margin: 50px auto;
+  padding: 20px 0;
+  /* طول النص  */
+  width: 14ch; 
+  direction: rtl;
+  animation: typing 2s steps(14) 1 forwards;
+}
+
+h2::after {
+content: '';
+  position: absolute;
+  left: 0; /* لان اللغه العربية تبدأ من اليمين */
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: #8B0000;
+  animation: blink 0.7s infinite;
+}
+
+
+/* =================================================================================================== */
+
+/* رأس الموقع */
+header nav a h1{
+  text-decoration: none;
+  color: #fff;
+  
+  
+}
+header {
+  background-color: #8B0000;
+  color: white;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  padding: 0 20px;
+  z-index: 999;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 50px;
+}
+
+
+nav h1 {
+  margin: 0;
+  font-size: 28px;
+  transition: .4s;
+}
+h1:hover{
+  transform: scale(1.1);
+  animation: logo 1s infinite;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  transition: .3s;
+}
+
+nav ul li a:hover {
+  color: #FFD700;
+  
+}
+
+.top{
+  font-size: 35px;
+  background-color: #d1bea2;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  padding: 5px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 150px;
+  right: 40px;
+  transition: .4s;
+
+}
+.top:hover{
+  background-color: #b19c7d;
+  transform: scale(1.09);
+  
+}
+.top:active{
+  color: #fff;
+  background-color: #c4af91;
+  
+}
+/* =================================================================================================== */
+
+/* قسم الهيرو */
+
+.hero-img{
+  display: flex;
+  background-image: url("imges/restaurant-front.jpeg");
+  width: 100%;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+
+.welcome{
+  width: 96%;
+  height: 600px;
+  position: absolute;
+  display: flex;
+  background-color: #2222225d;
+  color: #fff;
+  padding-right: 50px;
+  align-items: center;
+  font-size: 100px;
+  opacity: 0;
+  animation: size-up 1s,fadeIn .2s forwards;
+  animation-delay: .5s;
+}
+
+.welcome-text p{
+  color: #ffffff;
+}
+/* =================================================================================================== */
+
+/* ميزات الرئيسية */
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background-color: #fff1e0;
+  margin-bottom: -100px;
+  
+}
+
+.feature {
+  width: 300px;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  transition: .4s;
+}
+.feature h3{
+  padding-left: 100px;
+}
+.feature:hover{
+  transform: scale(1.06);
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.361);
+  border-radius: 8px;
+}
+
+.feature img {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.feature h3 {
+  margin: 10px 0 5px;
+  color: #8B0000;
+  margin-right: 100px;
+}
+
+.feature p {
+  font-size: 15px;
+}
+/* =================================================================================================== */
+
+/* قسم قائمة الطعام */
+.menu-section {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: -100px;
+}
+
+.menu-items {
+  padding: 40px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap; /* مهم لكي يتم لف العناصر لما يصغر العرض */
+  gap: 20px;
+  width: 100%;
+}
+
+.menu-items > div {
+  background-color: #f5dab9;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 8px;
+  transition: .4s;
+  flex: 1 1 250px; /* مرن حسب حجم الشاشة */
+  max-width: 235px;
+  min-width: 200px;
+  text-align: center;
+}
+
+.menu-items > div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(184, 182, 182, 0.521);
+}
+
+h3 {
+  color: #D2691E;
+  margin-top: 20px;
+}
+
+.menu-section ul {
+  list-style-type: square;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.menu-section li {
+  margin: 10px 0;
+}
+
+.menu-section img {
+  width: 150px;
+  height: 150px;
+  max-width: 100%;
+  display: block;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .menu-items {
+    justify-content: center;
+  }
+  
+  .menu-items > div {
+    max-width: 90%; /* لما تصغر الشاشة يصير كل عمود يأخذ عرض أكبر وينزل تحت */
+  }
+}
+
+/* =================================================================================================== */
+
+/* صفحة من نحن  */
+.about-page {
+  padding: 40px 20px;
+  background-color: #fff8f1;
+  text-align: center;
+}
+
+.about-intro h2 {
+  font-size: 30px;
+  color: #8B0000;
+  margin-bottom: 10px;
+}
+
+.about-intro p {
+  font-size: 18px;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.8;
+}
+
+.about-image img {
+  width: 80%;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  margin: 20px 0;
+  animation: fadeIn 1s ,size-up 1s;
+}
+
+/* =================================================================================================== */
+
+/* قسم الفريق - تنسيق أفقي جديد */
+.team-section {
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.team-note {
+  font-size: 17px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.team-section h3 {
+  font-size: 22px;
+  color: #8B0000;
+  margin-bottom: 20px;
+  margin-left: 100px;
+
+}
+
+.team-list-inline {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team-list-inline span {
+  
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 17px;
+  color: #333;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: .3s;
+}
+.team-list-inline span:hover{
+  background: #ffeede;
+  transform: scale(1.1);
+}
+/* =================================================================================================== */
+
+/* قسم تواصل معنا */
+.contact {
+  padding: 40px 20px;
+  background-color: #fff1e0;
+  
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.contact button {
+  background-color: #8B0000;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #a30000;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 30px;
+}
+/* =================================================================================================== */
+
+/* تذييل الموقع */
+footer {
+  background-color: #8B0000;
+  text-align: center;
+  padding: 15px;
+  margin-top: 200px;
+  
+}
+footer p{
+  color: white;
+}
+
+.team {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.member {
+  display: inline-block;
+  margin: 20px;
+}
+
+.member img {
+  border-radius: 50%;
+  border: 2px solid #c59d5f;
+}
+/* =================================================================================================== */
+/* تنسيقات قسم العروض */
+
+.offers {
+  padding: 40px 20px;
+  background-color: #fff9f0;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.offers-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.offer-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: scale(1.03);
+}
+
+.offer-card img {
+  width: 90%;
+  height: 180px;
+  object-fit: cover;
+  margin: 10px auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.offer-card h3 {
+  margin: 15px 0 10px;
+  font-size: 20px;
+  color: #8B0000;
+}
+
+.offer-card p {
+  padding: 0 15px 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.card1{
+  opacity: 0;
+  animation: fadeIn 1s ,size-up2 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0;
+}
+.card2{
+  opacity: 0;
+  animation: fadeIn 1s ,size-up2 1s;
+  animation-fill-mode: forwards;
+  animation-delay: .5s;
+}
+.card3{
+  opacity: 0;
+  animation: fadeIn 1s ,size-up2 1s;
+  animation-fill-mode: forwards;
+  animation-delay: .9s;
+}
+/* ======================================================================================================== */
+/* تنسيقات صفحة الوظائف */
+.jobs {
+  padding: 40px 20px;
+  background-color: #fff8f3;
+  text-align: center;
+}
+
+.jobs-intro {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.job-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: right;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: .3s;
+  
+}
+
+
+.job-card:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.493);
+  
+}
+
+
+.job-card h3 {
+  color: #8B0000;
+  margin-bottom: 10px;
+}
+
+.job-card p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+.apply-now h4{
+  font-size: 25px;
+}
+.apply-now a {
+  color: #8B0000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color .4s;
+}
+.apply-now a:hover{
+  color: #d70404;
+}
+
+.delivery-section *{
+  font-size: 18px;
+  font-weight: bold;
+}
+.delivery-section {
+  padding: 50px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  position: relative;
+  top: 100px;
+  
+  
+}
+.delivery-section h2{
+  font-size: 40px;
+}
+.delivery-section h2 ,p{
+  color: #D2691E;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.delivery-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.delivery-form input,
+.delivery-form textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.delivery-form button {
+  width: 50%;
+  background-color: #D2691E;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.delivery-form button:hover {
+  background-color: #b35418;
+}
+
+
+
+
+
+/* ================================================================================================================== */
+/* animation */
+@keyframes logo {
+  50%{
+    color: #D2691E;
+  }
+  50%{
+    color: #FFD700;
+  }
+}
+@keyframes size-up {
+  0%{
+      font-size: 0;
+      margin-top: 60px;
+      
+  }
+  100%{
+    opacity: 100%;
+  }
+  
+}
+
+@keyframes size-up2 {
+  0%{
+      margin-top: 60px;
+      
+  }
+  100%{
+    opacity: 100%;
+  }
+
+}
+/* انيميشن الكتابة  */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 14ch; }
+}
+/* الخط الطولي النابض */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+  0%, 50% { border-color: #8B0000; }
+      50.01%, 100% { border-color: transparent; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
